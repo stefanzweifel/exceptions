@@ -3,7 +3,6 @@
 namespace Mallinus\Exceptions;
 
 use Exception;
-use Symfony\Component\HttpKernel\EventListener\ExceptionListener;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Illuminate\Foundation\Exceptions\Handler;
 
