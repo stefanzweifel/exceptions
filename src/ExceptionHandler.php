@@ -73,9 +73,11 @@ class ExceptionHandler extends Handler
 	 */
 	private function handleException($listener, Exception $exception)
 	{
-		if ($listener instanceof ExceptionListener)
+		$listenerInstance = new $listener();
+
+		if ($listenerInstance instanceof ExceptionListener)
 		{
-			return (new $listener())->handle($exception);
+			return $listenerInstance->handle($exception);
 		}
 		else
 		{
