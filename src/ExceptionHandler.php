@@ -58,11 +58,24 @@ class ExceptionHandler extends Handler
 	}
 
 	/**
-	 * @return array
+	 * @return null
+	 * @throws Exception
 	 */
 	private function getListeners()
 	{
-		return isset($this->listen) ? $this->listen : array();
+		$listeners = $this->listen;
+
+		if ( ! isset($listeners))
+		{
+			return null;
+		}
+
+		if ( ! is_array($listeners))
+		{
+			throw new Exception('$listen property in ' . get_called_class() . ' must be an array.');
+		}
+
+		return $listeners;
 	}
 
 	/**

@@ -17,7 +17,7 @@ class DefaultExceptionListener extends RedirectExceptionListener implements Exce
 	 */
 	public function handle(Exception $exception)
 	{
-		return $this->redirect()->back()->with([
+		return $this->redirect()->back()->withInput()->with([
 			'errors' => $exception->getMessage()
 		]);
 	}
