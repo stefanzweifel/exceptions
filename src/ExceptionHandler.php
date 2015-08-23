@@ -73,6 +73,11 @@ class ExceptionHandler extends Handler
 	 */
 	private function handleException($listener, Exception $exception)
 	{
+		if ( ! class_exists($listener))
+		{
+			throw new Exception($listener . ' is not an instantiatable class.');
+		}
+
 		$listenerInstance = new $listener();
 
 		if ($listenerInstance instanceof ExceptionListener)
