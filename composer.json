@@ -1,23 +1,33 @@
 {
-    "name": "mallinus/exceptions",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Mathias Mallinus",
-            "email": "mathias.mallinus@gmail.com"
-        },
-        {
-            "name": "Wannes Gennar",
-            "email": "wannes.gennar@gmail.com"
-        }
-    ],
-    "require": {
-        "laravel/framework": "5.1.*"
-    },
-    "autoload": {
-        "psr-4": {
-            "Mallinus\\Exceptions\\": "src/"
-        }
-    },
-    "minimum-stability": "dev"
+  "name": "mallinus/exceptions",
+  "license": "MIT",
+  "authors": [
+	{
+	  "name": "Mathias Mallinus",
+	  "email": "mathias.mallinus@gmail.com"
+	},
+	{
+	  "name": "Wannes Gennar",
+	  "email": "wannes.gennar@gmail.com"
+	}
+  ],
+  "require": {
+	"laravel/framework": "5.1.*",
+	"phpunit/phpunit": "^4.8"
+  },
+  "autoload": {
+	"psr-4": {
+	  "Mallinus\\Exceptions\\": "src/"
+	}
+  },
+  "autoload-dev": {
+	"classmap": [
+	  "tests/TestCase.php",
+	  "tests/Handler/ExceptionHandler.php"
+	]
+  },
+  "require-dev": {
+	"orchestra/testbench": "~3.0"
+  },
+  "minimum-stability": "dev"
 }
