@@ -3,7 +3,6 @@
 namespace Mallinus\Exceptions;
 
 use Exception;
-use Symfony\Component\HttpKernel\Exception\HttpException;
 use Illuminate\Foundation\Exceptions\Handler;
 
 /**
@@ -12,15 +11,6 @@ use Illuminate\Foundation\Exceptions\Handler;
  */
 class ExceptionHandler extends Handler
 {
-	/**
-	 * A list of the exception types that should not be reported.
-	 *
-	 * @var array
-	 */
-	protected $dontReport = [
-		HttpException::class,
-	];
-
 	/**
 	 * Report or log an exception.
 	 *
@@ -58,7 +48,7 @@ class ExceptionHandler extends Handler
 	}
 
 	/**
-	 * @return null
+	 * @return null|array
 	 * @throws Exception
 	 */
 	private function getListeners()
