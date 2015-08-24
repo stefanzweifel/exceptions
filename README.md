@@ -56,6 +56,7 @@ class Handler extends ExceptionHandler
 ```
 
 ## Custom exception listeners
+- Implement the ExceptionListener contract.
 
 ```php
 <?php
