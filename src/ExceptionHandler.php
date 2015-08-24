@@ -48,7 +48,7 @@ class ExceptionHandler extends Handler
 	}
 
 	/**
-	 * @return null|array
+	 * @return array
 	 * @throws Exception
 	 */
 	private function getListeners()
@@ -57,7 +57,7 @@ class ExceptionHandler extends Handler
 
 		if ( ! isset($listeners))
 		{
-			return null;
+			return array();
 		}
 
 		if ( ! is_array($listeners))
