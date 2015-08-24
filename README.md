@@ -14,10 +14,6 @@ namespace App\Exceptions;
 use Mallinus\Exceptions\ExceptionHandler;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 
-/**
- * Class Handler
- * @package App\Exceptions
- */
 class Handler extends ExceptionHandler
 {
     protected $dontReport = [
