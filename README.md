@@ -1,11 +1,33 @@
 # Exceptions
-Easy exception handling in Laravel 5.1.
+
+In bigger apps you'll often find yourself having a bunch of if instanceof statements to handle exceptions.
+```php
+public function render($request, Exception $e)
+{
+    if ($e instanceof UserNotFoundException)
+    {
+        return response()->json([
+            'error' => $e->getMessage()
+        ], 404);
+    }
+        
+    // more if instanceof statements...
+        
+    return parent::render($request, $e);
+}
+```
+Instead of using repetitive if instanceof code blocks, this package offers a listener approach.
+```php
+protected $listen = [
+    ModelNotFoundExceptionListener::class => [
+        UserNotFoundException::class,
+    ],
+];
+```
 
 ## Installation
 - Add "mallinus/exceptions": "5.1.*" to your composer.json require.
-
-
-- Update your exception handler. You can use the same exception listener for multiple exceptions.
+- Update your exception handler. You may use the same exception listener for multiple exceptions.
 
 ```php
 <?php
@@ -23,8 +45,10 @@ class Handler extends ExceptionHandler
 
     protected $listen = [
         /*
-        SomeExceptionListener::class => [
-            SomeException::class,
+        ModelNotFoundExceptionListener::class => [
+            UserNotFoundException::class,
+            PostNotFoundException::class,
+            CommentNotFoundException::class,
         ],
         */
     ];
@@ -52,5 +76,5 @@ class CustomExceptionListener implements ExceptionListener
 }
 ```
 
-### Credits
+## Credits
 Special thanks to @Deall0c for the idea.
