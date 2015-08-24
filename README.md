@@ -55,3 +55,6 @@ class CustomExceptionListener implements ExceptionListener
 	}
 }
 ```
+
+### Credits
+Special thanks to @Deall0c for the idea.
