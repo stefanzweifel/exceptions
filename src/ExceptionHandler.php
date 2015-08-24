@@ -39,7 +39,7 @@ class ExceptionHandler extends Handler
 			{
 				if ($e instanceof $exception)
 				{
-					return $this->handleException($listener, $e);
+					return $this->renderException($listener, $e);
 				}
 			}
 		}
@@ -74,7 +74,7 @@ class ExceptionHandler extends Handler
 	 * @return mixed
 	 * @throws Exception
 	 */
-	private function handleException($listener, Exception $exception)
+	private function renderException($listener, Exception $exception)
 	{
 		if ( ! class_exists($listener))
 		{
