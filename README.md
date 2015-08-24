@@ -77,4 +77,4 @@ class CustomExceptionListener implements ExceptionListener
 ```
 
 ## Credits
-Special thanks to @Deall0c for the idea.
+Special thanks to [@Deall0c](https://github.com/Deall0c/) for the idea.
