@@ -4,7 +4,7 @@
 - Add "mallinus/exceptions": "dev-master" to your composer.json require.
 
 
-- Update your exception handler.
+- Update your exception handler. You can use the same exception listener for multiple exceptions.
 
 ```
 <?php
