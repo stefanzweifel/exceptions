@@ -6,7 +6,7 @@
 
 - Update your exception handler. You can use the same exception listener for multiple exceptions.
 
-```
+```php
 <?php
 
 namespace App\Exceptions;
@@ -32,7 +32,7 @@ class Handler extends ExceptionHandler
 
 ## Custom exception listeners
 
-```
+```php
 <?php
 
 namespace App\Exceptions\Listeners;
