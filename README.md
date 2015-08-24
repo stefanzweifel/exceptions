@@ -1,7 +1,7 @@
 # Exceptions
 
 ## Installation
-- Add "mallinus/exceptions": "dev-master" to your composer.json require.
+- Add "mallinus/exceptions": "5.1" to your composer.json require.
 
 
 - Update your exception handler. You can use the same exception listener for multiple exceptions.
