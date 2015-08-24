@@ -10,5 +10,9 @@ use Exception;
  */
 interface ExceptionListener
 {
+	/**
+	 * @param Exception $exception
+	 * @return mixed
+	 */
 	public function handle(Exception $exception);
 }
