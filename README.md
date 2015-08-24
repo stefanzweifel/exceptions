@@ -1,4 +1,5 @@
 # Exceptions
+Easy exception handling in Laravel 5.1.
 
 ## Installation
 - Add "mallinus/exceptions": "5.1" to your composer.json require.
