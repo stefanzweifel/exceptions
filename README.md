@@ -11,7 +11,6 @@
 
 namespace App\Exceptions;
 
-use App\Exceptions\Listeners\SomeExceptionListener;
 use Mallinus\Exceptions\ExceptionHandler;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 
