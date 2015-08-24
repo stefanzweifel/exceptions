@@ -1,6 +1,6 @@
 # Exceptions
 
-In bigger apps you'll often find yourself having a bunch of if instanceof statements to handle exceptions.
+In bigger Laravel applications you'll often find yourself having a bunch of if statements in the exception handler:
 ```php
 public function render($request, Exception $e)
 {
