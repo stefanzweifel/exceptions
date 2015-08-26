@@ -23,8 +23,7 @@
   },
   "autoload-dev": {
 	"classmap": [
-	  "tests/TestCase.php",
-	  "tests/Handler/ExceptionHandler.php"
+	  "tests/ExceptionHandlerTest.php"
 	]
   },
   "require-dev": {
