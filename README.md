@@ -24,6 +24,7 @@ protected $listen = [
     ],
 ];
 ```
+If no exception listener is bound to the exception thrown, then the default Laravel 5.1 behaviour will be used. This means that you'll get the Laravel error page as per default. Don't forget to set app_debug to false in your app config in case you are in production.
 
 ## Installation
 - Add "mallinus/exceptions": "5.1.*" to your composer.json require.
