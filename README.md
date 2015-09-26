@@ -45,7 +45,7 @@ class Handler extends ExceptionHandler
     ];
 
     protected $listen = [
-        /*
+        /* The ModelNotFoundExceptionListener will be fired when one of the exceptions is thrown in your application.
         ModelNotFoundExceptionListener::class => [
             UserNotFoundException::class,
             PostNotFoundException::class,
