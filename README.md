@@ -16,7 +16,7 @@ public function render($request, Exception $e)
     return parent::render($request, $e);
 }
 ```
-Instead of using repetitive "if instanceof object" code blocks, this package offers a listener approach. All you have to tell it is which listener should be fire when a particular exception is thrown.
+Instead of using repetitive "if instanceof object" code blocks, this package offers a listener approach. All you have to tell it is which listener should be fired when a particular exception is thrown.
 ```php
 protected $listen = [
     ModelNotFoundExceptionListener::class => [
